@@ -1,4 +1,4 @@
-import 'package:ecommerce_app/colors.dart';
+import 'package:ecommerce_app/config/colors.dart';
 import 'package:flutter/material.dart';
 
 class CustomNavBar extends StatelessWidget {

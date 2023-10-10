@@ -1,4 +1,4 @@
-import 'package:ecommerce_app/colors.dart';
+import 'package:ecommerce_app/config/colors.dart';
 import 'package:flutter/material.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -20,15 +20,20 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         child: Text(
           title,
-          style: const TextStyle(
-              color: Colors.white,
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-              fontFamily: "Avenir"),
+          style: Theme.of(context)
+              .textTheme
+              .displayMedium!
+              .copyWith(color: Colors.white),
         ),
       ),
       iconTheme: IconThemeData(color: AppColors.customColor),
-      actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.favorite))],
+      actions: [
+        IconButton(
+            onPressed: () {
+              Navigator.pushNamed(context, "/wishlist");
+            },
+            icon: const Icon(Icons.favorite))
+      ],
     );
   }
 
