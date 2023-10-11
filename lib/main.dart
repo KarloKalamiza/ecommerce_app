@@ -1,5 +1,4 @@
 import 'package:ecommerce_app/config/app_router.dart';
-import 'package:ecommerce_app/config/colors.dart';
 import 'package:ecommerce_app/config/theme.dart';
 import 'package:ecommerce_app/screens/home/homeScreen.dart';
 import 'package:flutter/material.dart';
